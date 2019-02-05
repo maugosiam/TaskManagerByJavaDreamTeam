@@ -99,9 +99,7 @@ public class SqlHandler implements Writeable, Readable {
         try {
             Class.forName(JDBC_DRIVER);
             connection = DriverManager.getConnection(DATABASE_URL + databaseName);
-            if (connection != null) {
-            }
-        } catch (ClassNotFoundException e) {
+            } catch (ClassNotFoundException e) {
             System.out.println(e.getMessage());
             e.printStackTrace();
         }
